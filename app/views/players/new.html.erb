@@ -1,0 +1,12 @@
+<h1>New Player</h1>
+
+<%= bootstrap_form_with model: @player, url: players_path, method: :post, data: { turbo: false } do |form| %>
+  <%= form.text_field :first_name %>
+  <%= form.text_field :last_name %>
+  <%= form.text_field :position %>
+  <%= form.submit "Create Player", class: 'btn btn-primary' %>
+<% end %>
+
+<p>
+  <%= link_to 'Back', players_path, class: 'btn btn-secondary' %>
+</p>

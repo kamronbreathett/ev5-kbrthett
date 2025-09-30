@@ -1,0 +1,12 @@
+<h1>Edit Player for </h1>
+
+<%= bootstrap_form_with model: @team, url: player_path(@player, @team), method: :patch, data: { turbo: false } do |form| %>
+  <%= form.text_field :first_name %>
+  <%= form.text_field :last_name %>
+  <%= form.text_field :position %>
+  <%= form.submit "Update Player", class: 'btn btn-primary' %>
+<% end %>
+
+<p>
+  <%= link_to 'Back', players_path, class: 'btn btn-secondary' %>
+</p>

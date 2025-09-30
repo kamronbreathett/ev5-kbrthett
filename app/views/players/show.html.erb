@@ -1,0 +1,14 @@
+<h1><%= @player.first_name %> <%= @player.last_name %></h1>
+
+<p>
+  <strong>Position:</strong>
+  <%= @team.position %>
+</p>
+
+<p>
+  <%= link_to 'Edit', edit_team_player_path(@player), class: 'btn btn-primary' %>
+</p>
+
+<p>
+  <%= link_to 'Back', players_path, class: 'btn btn-secondary' %>
+</p>

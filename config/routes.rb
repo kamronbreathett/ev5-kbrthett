@@ -18,4 +18,13 @@ Rails.application.routes.draw do
   get 'teams/:id/edit', to: 'teams#edit', as: 'edit_team'
   patch 'teams/:id', to: 'teams#update'
   delete 'teams/:id', to: 'teams#destroy'
+
+  # Players Routes
+  get 'teams/:team_id/players', to: 'players#index', as: 'team_players'
+  post 'teams', to: 'teams#create'
+  get 'teams/:team_id/players/new', to: 'players#new', as: 'new_team_player'
+  get 'teams/:team_id/players/:id', to: 'players#show', as: 'team_player'
+  get 'teams/:team_id/players/:id/edit', to: 'players#edit', as: 'edit_team_player'
+  patch 'teams/:team_id/players/:id', to: 'players#update'
+  delete 'teams/:team_id/players/:id', to: 'players#destroy'
 end
